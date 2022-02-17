@@ -1,4 +1,6 @@
 # ✨ Metalamp task 2 v.1 ✨
+Проект реализуется в рамках образовательной программы [Metalamp](https://www.metalamp.ru/education)  
+<hr>
 Used [basic configuration of Webpack 5](https://github.com/MilaNick/webpack-template)
 The project uses Sass(Scss), Pug, Bootstrap, Jquery, React, Typescript
 

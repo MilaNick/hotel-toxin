@@ -39,7 +39,10 @@ module.exports = {
     alias: {
       '@src': path.resolve(__dirname, 'src'),
       '@images': path.resolve(__dirname, 'src/images'),
-      '@styles': path.resolve(__dirname, 'src/styles')
+      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@favicons': path.resolve(__dirname, 'src/favicons'),
     }
   },
   devServer: {
@@ -64,7 +67,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/favicon.ico'),
+          from: path.resolve(__dirname, 'src/favicons/favicon.ico'),
           to: path.resolve(__dirname, 'dist')
         }
       ],

@@ -29,6 +29,7 @@ npm run dev
 the following commands are used:
 
 ```
+$ git branch gh-pages
 $ cd dist
 $ echo  " dist/ "  >> .gitignore
 $ git add --all
@@ -36,4 +37,10 @@ $ git commit -m " Deploy to gh-pages "
 $ git push origin gh-pages
 $ git worktree add dist gh-pages
 $ rm -rf dist
+```
+## Delete worktree
+```
+$ git worktree prune
+git branch -D gh-pages
+git push origin --delete gh-pages
 ```

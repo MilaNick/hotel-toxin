@@ -28,19 +28,23 @@ npm run dev
 ## To load a page on github pages  
 the following commands are used:
 
+- step 1  
+Delete the dist directory from .gitignore of the project file
+-  step 2
 ```
-$ git branch gh-pages
-$ cd dist
-$ echo  " dist/ "  >> .gitignore
-$ git add --all
-$ git commit -m " Deploy to gh-pages "
-$ git push origin gh-pages
-$ git worktree add dist gh-pages
-$ rm -rf dist
+git add dist && git commit -m "  init dist "
 ```
+- step 3  
+Use the subtree push to send it to the gh-pages branch on GitHub.
+```
+git subtree push --prefix dist origin gh-pages
+```
+
 ## Delete worktree
 ```
 $ git worktree prune
 git branch -D gh-pages
 git push origin --delete gh-pages
 ```
+
+

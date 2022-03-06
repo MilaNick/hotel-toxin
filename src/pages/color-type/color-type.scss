@@ -1,0 +1,23 @@
+body{
+  width: 144rem;
+  height: 90rem;
+}
+
+.logo{
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-bottom: 6.7rem;
+}
+
+.color-type{
+
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 14.8rem 14.5rem 15rem;
+  }
+
+  &__palette{
+    width: 28.12rem;
+  }
+}

@@ -1,1 +1,7 @@
-
+mixin colorPalette({title, desc, color})
+    .color-palette
+        .color-palette__wrap
+            div(class=`color-palette__rectangle--${color} color-palette__rectangle`)
+            .color-palette__wrapper
+                .color-palette__title #{ title }
+                .color-palette__text #{ desc }

@@ -28,7 +28,6 @@ module.exports = {
   mode: mode,
   entry: {
     scripts: './src/index.js',
-    user: './src/user.js',
   },
   output: {
     filename: '[name].[contenthash].js',

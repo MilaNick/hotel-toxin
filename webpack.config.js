@@ -58,7 +58,35 @@ module.exports = {
       filename: '[name].[contenthash].css'
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.pug',
+      template: path.resolve(__dirname, 'src/index.pug'),
+      minify: {
+        collapseWhitespace: true,
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/pages/color-type/color-type.pug'),
+      filename: 'color-type.html',
+      minify: {
+        collapseWhitespace: true,
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/pages/cards/cards.pug'),
+      filename: 'cards.html',
+      minify: {
+        collapseWhitespace: true,
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/pages/form-elements/form-elements.pug'),
+      filename: 'form-elements.html',
+      minify: {
+        collapseWhitespace: true,
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/pages/headers-footers/headers-footers.pug'),
+      filename: 'headers-footers.html',
       minify: {
         collapseWhitespace: true,
       }

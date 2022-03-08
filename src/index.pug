@@ -4,4 +4,12 @@ doctype html
 html(lang='en')
     include pug/_head
     body
-        include pages/color-type/color-type
+        +svg('logo-inactive', 'logo')
+        .main
+            h1.main__title Pages
+            h2.main__subtitle UI-kit
+            a(href='color-type.html' class='main__link') color-type
+            a(href='cards.html' class='main__link') cards
+            a(href='headers-footers.html' class='main__link') headers-footers
+            a(href='form-elements.html' class='main__link') form-elements
+

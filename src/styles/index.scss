@@ -10,3 +10,42 @@ html{
   font-weight: 700;
 }
 
+body{
+  max-width: 192rem;
+  min-width: 32rem;
+  margin: 0 auto;
+}
+
+.logo{
+  &--inactive{
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 6.7rem;
+  }
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  &__title,
+  &__subtitle{
+    padding: 2rem;
+  }
+  &__link {
+    height: 2rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    color: $dark-shade100;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $purple;
+    }
+  }
+}
+

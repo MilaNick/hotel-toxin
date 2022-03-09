@@ -1,0 +1,17 @@
+block variables
+  - var menu = [{link:'#', text: 'О нас'}, {link:'#', text: 'Услуги'}, {link:'#', text: 'Вакансии'}, {link:'#', text: 'Новости'}, {link:'#', text: 'Соглашения'}];
+
+mixin header()
+    header.header
+        +svg('logo-active', 'logo--active')
+        each item in menu
+            - var link = item.link;
+            - var text = item.text;
+            nav.menu
+                a(href=link class='menu-item') #{text}
+
+        //// должно быть условие, если авторизирован, то с кнопками, иначе с именем
+        //.button.btn--sm Войти
+        //.button.btn--bg Зарегистрироваться
+        //.user-name Юлий Цезарь
+

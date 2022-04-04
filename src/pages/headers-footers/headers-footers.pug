@@ -1,7 +1,16 @@
 include ../../pug/libs/_libs
 include ../../components/header/header
+include ../../components/footer/footer
+include ../../components/buttons/buttons
 
+block variables
+  - var user = {link: '#', name: 'Юлий Цезарь'}
 
 +svg('logo-inactive', 'logo--inactive')
-+header(link, text)
-+header(link, text)
+- var auth = false;
++header(link, text, auth)
+- var auth = true;
++header(link, text, auth, user)
+- var format = ['desktop', 'mobile'];
++footer(format[0], menu2)
++footer(format[1], menu2)

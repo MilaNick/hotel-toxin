@@ -3,22 +3,15 @@ include ../../components/color-typeface/color-typeface
 include ../../pug/libs/_libs
 
 block variables
-    - var dataColors = [{title: 'Dark Shade 100%', desc: '#1F2041', color: '100'},{title: 'Dark Shade 75%', desc: '#1F2041', color: '75'},{title: 'Dark Shade 50%', desc: '#1F2041', color: '50'},{title: 'Dark Shade 25%', desc: '#1F2041', color: '25'},{title: 'Dark Shade 5%', desc: '#1F2041', color: '5'},{title: 'Purple', desc: '#BC9CFF', color: 'purple'},{title: 'Green', desc: '#6FCF97', color: 'green'}];
-    - var dataTypeface = [{word: 'H1', text: 'This one is the sub-section or widget title'}, {word: 'H2', text: 'Next one is the item title inside widgets'}, {word: 'H3', text: 'This is a label or CTA text'}, {word: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
+	- var dataColors = [{title: 'Dark Shade 100%', desc: '#1F2041', color: '100'},{title: 'Dark Shade 75%', desc: '#1F2041', color: '75'},{title: 'Dark Shade 50%', desc: '#1F2041', color: '50'},{title: 'Dark Shade 25%', desc: '#1F2041', color: '25'},{title: 'Dark Shade 5%', desc: '#1F2041', color: '5'},{title: 'Purple', desc: '#BC9CFF', color: 'purple'},{title: 'Green', desc: '#6FCF97', color: 'green'}];
+	- var dataTypeface = [{word: 'H1', text: 'This one is the sub-section or widget title'}, {word: 'H2', text: 'Next one is the item title inside widgets'}, {word: 'H3', text: 'This is a label or CTA text'}, {word: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
 
 +svg('logo-inactive', 'logo--inactive')
 .color-type__wrap
-    .color-type__palette
-        each item in dataColors
-            - var title = item.title;
-            - var desc = item.desc;
-            - var color= item.color;
-            +colorPalette({ title, desc, color})
-    .color-type__typeface
-        each item, i in dataTypeface
-            - var word = item.word;
-            - var text = item.text;
-            - var size = `h${+i+1}`;
-            #{size}
-                +colorTypeface({word,text})
-
+	.color-type__palette
+		each item in dataColors
+			+colorPalette(item.title, item.desc, item.color)
+	.color-type__typeface
+		each item, i in dataTypeface
+			- var size = `h${+i+1}`;
+			+colorTypeface(size,item.word,item.text)

@@ -1,3 +1,7 @@
 node_modules/
 .idea/
 dist/
+/cards.jpg
+/colors-type.jpg
+/form-elements.jpg
+/headers-footers.jpg

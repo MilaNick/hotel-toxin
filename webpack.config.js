@@ -2,8 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const getLogger = require('webpack-log');
+const TerserPlugin = require('terser-webpack-plugin'); // минификация js
+const getLogger = require('webpack-log'); // вывод журнала
 const log = getLogger({name: 'webpack'});
 
 let mode = 'development'

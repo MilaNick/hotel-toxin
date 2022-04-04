@@ -4,13 +4,18 @@
   display: flex;
   justify-content: left;
   width: 43.6rem;
-  margin-bottom: 5.1rem;
+  margin-bottom: 5.03rem;
 
   &__word{
+    width: 3.7rem;
+    text-align: right;
     color: $dark-shade25;
   }
+
   &__text{
+    width: calc(100% - 3.7rem);
     margin-left: 3rem;
+    text-align: left;
     letter-spacing: 0.05rem;
   }
 }
@@ -34,11 +39,10 @@ h2{
   line-height: 2.3rem;
   font-weight: bold;
 }
-                 
+
 h3{
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-

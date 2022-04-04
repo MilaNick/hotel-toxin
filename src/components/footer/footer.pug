@@ -1,0 +1,35 @@
+block variables
+	- var logo = [{link: '#'}];
+	- var content = 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации "Отельные взгляды"';
+	- var menu2 = [{cls: 'column1', title: 'навигация', subMenu: ['О нас', 'Новости', 'Служба поддержки', 'Услуги']},{cls: 'column2', title: 'о нас', subMenu: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']}, {cls: 'column3', title: 'служба поддержки', subMenu: ['Соглашения', 'Сообщества', 'Связь с нами']},{cls: 'column4', title: 'подписка', subMenu: ['Получайте специальные предложения и новости сервиса']}]
+	- var copyright = 'Copyright © 2018 Toxin отель. Все права защищены.'
+	- var format = ['desktop', 'mobile'];
+
+mixin footer(size, menu2)
+	footer(class=`footer footer--${size}`)
+		if size === format[0]
+			.footer__wrap
+				.footer__column
+					a(href=logo[0].link class='footer__logo')
+						+svg('logo-active', 'logo--active')
+					.footer__content #{content}
+				nav.footer__menu
+					each item in menu2
+						div(class=`footer__${item.cls}`)
+							a(href='#' class=`footer__menu-title`) #{item.title}
+								each list in item.subMenu
+									a(href='#' class=`footer__menu-list`) #{list}
+			.footer__wrapper
+				.footer__copyright #{copyright}
+				.footer__social
+					+svg('twitter', 'footer__icon')
+					+svg('facebook', 'footer__icon')
+					+svg('instagram', 'footer__icon')
+		else
+			a(href=logo[0].link class='footer__logo')
+				+svg('logo-active', 'logo--active')
+			.footer__copyright #{copyright}
+			.footer__social
+				+svg('twitter', 'footer__icon')
+				+svg('facebook', 'footer__icon')
+				+svg('instagram', 'footer__icon')

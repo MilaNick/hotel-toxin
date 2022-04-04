@@ -1,0 +1,61 @@
+@import '../../styles/variables';
+
+.header{
+  display: flex;
+  align-items: center;
+  width: 144rem;
+  min-height: 7rem;
+  margin-bottom: 4rem;
+  padding: 0 14rem 0 14rem;
+  background: $white;
+  box-shadow: 0 1rem 2rem $dark-shade5;
+
+  &__wrap{
+    display: flex;
+    width: calc(100% - 10.6rem);
+    margin-right: 0;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__menu {
+    &-item {
+      margin-right: 2.25rem;
+      text-decoration: none;
+      font-size: 1.4rem;
+      line-height: 1.71rem;
+      color: $dark-shade50;
+      .active{
+        font-weight: bold;
+        color: $dark-shade75;
+      }
+    }
+    &-arrow{
+      width: 1.24rem;
+      height: 1.21rem;
+      margin: 0 5px;
+      font-size: 1.4rem;
+      line-height: 1.71rem;
+      font-weight: bold;
+    }
+  }
+
+  &__buttons{
+    display: flex;
+    flex-direction: row;
+    margin-right: 0;
+
+    & .btn:not(:first-child){
+      margin-left: 2rem;
+    }
+  }
+
+  &__user-name{
+    padding-left: 2rem;
+    border-left: 1px solid $dark-shade5;
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 1.71rem;
+    color: $dark-shade50;
+  }
+}

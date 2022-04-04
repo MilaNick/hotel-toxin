@@ -1,17 +1,24 @@
 block variables
-  - var menu = [{link:'#', text: 'О нас'}, {link:'#', text: 'Услуги'}, {link:'#', text: 'Вакансии'}, {link:'#', text: 'Новости'}, {link:'#', text: 'Соглашения'}];
+	- var logo = [{link: '#'}]
+	- var menu1 = [{link:'#', text: 'О нас', dropdown: []}, {link:'#', text: 'Услуги', dropdown: ['1', '2', '3', '4']}, {link:'#', text: 'Вакансии', dropdown: []}, {link:'#', text: 'Новости', dropdown: []}, {link:'#', text: 'Соглашения', dropdown: ['1', '2', '3', '4']}];
+	- var auth = false;
+	- var buttons = [{link:'#', text:'войти'}, {link:'#', text:'зарегистрироваться'}];
 
-mixin header()
-    header.header
-        +svg('logo-active', 'logo--active')
-        each item in menu
-            - var link = item.link;
-            - var text = item.text;
-            nav.menu
-                a(href=link class='menu-item') #{text}
-
-        //// должно быть условие, если авторизирован, то с кнопками, иначе с именем
-        //.button.btn--sm Войти
-        //.button.btn--bg Зарегистрироваться
-        //.user-name Юлий Цезарь
-
+mixin header(link, text, auth, user)
+	header.header
+		a(href=logo[0].link class='header__logo')
+			+svg('logo-active', 'logo--active')
+		.header__wrap
+			nav.header__menu
+				each item in menu1
+					if item.dropdown.length !== 0
+						a(href=item.link class='header__menu-item') #{item.text}
+							+svg('expand_more', 'header__menu-arrow')
+					else
+						a(href=item.link class='header__menu-item') #{item.text}
+			if auth
+				a(href=user.link class='header__user-name') #{user.name}
+			else
+				.header__buttons
+					+btnSm(buttons[0].link, buttons[0].text)
+					+btnBg(buttons[1].link, buttons[1].text)

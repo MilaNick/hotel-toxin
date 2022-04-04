@@ -3,11 +3,11 @@
 @import 'fonts';
 @import 'mixin';
 
-
 html{
   font-family: Conv_Montserrat-Regular, sans-serif;
   font-size: 10px;
   font-weight: 700;
+  box-sizing: border-box;
 }
 
 body{
@@ -25,7 +25,8 @@ body{
     margin-bottom: 6.7rem;
   }
   &--active{
-
+    width: 10.6rem;
+    height: 4rem;
   }
 }
 

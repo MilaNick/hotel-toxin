@@ -1,0 +1,126 @@
+@import '../../styles/variables';
+
+.footer{
+  margin-bottom: 4rem;
+  background: $white;
+  box-shadow: 0 1rem 2rem $dark-shade5;
+
+  &--desktop{
+    display: flex;
+    flex-direction: column;
+    width: 144rem;
+    min-height: 44.3rem;
+    padding: 10.2rem 0 0;
+  }
+
+  &__column{
+    margin-left: 14rem;
+    margin-right: 2rem;
+    & .logo--active{
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  &__column,
+  &__column4{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  &__wrap{
+    display: flex;
+    width: 100%;
+    margin-bottom: 8rem;
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 144rem;
+    margin: 0 auto;
+    padding: 2.6rem 14rem;
+    border-top: 2px solid $dark-shade5;
+  }
+
+  &__menu{
+    display: flex;
+    width: 90rem;
+  }
+
+  &__column1,
+  &__column2,
+  &__column3{
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__column{
+    width: 26rem;
+    padding: 0;
+    margin-right: 4rem;
+  }
+  &__column1{
+    margin-right: 6rem;
+  }
+  &__column2{
+    margin-right: 9rem;
+  }
+
+  &__column3{
+    margin-right: 5.7rem;
+  }
+  &__column4{
+    margin-right: 0;
+    width: 26rem;
+  }
+  &__menu-title{
+    margin-top: 0.4rem;
+    margin-bottom: 2.1rem;
+    font-size: 1.2rem;
+    line-height: 1.46rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark-shade100;
+    text-decoration: none;
+  }
+  &__menu-list{
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $dark-shade50;
+    text-decoration: none;
+  }
+
+  &__column4 :last-child{
+    line-height: 2.4rem;
+    color: $dark-shade75;
+  }
+
+  &__icon:not(:first-child){
+    margin-left: 2rem;
+  }
+
+  &--mobile {
+    display: flex;
+    flex-direction: column;
+    width: 76.8rem;
+    min-height: 36.7rem;
+    margin: 0 auto;
+    padding: 11.6rem 10.4rem 8.6rem;
+    text-align: center;
+
+    .logo--active {
+      margin-bottom: 1.8rem;
+    }
+
+    .footer__copyright {
+      margin-bottom: 2rem;
+    }
+
+    .footer__social{
+      margin-bottom: 2rem;
+    }
+  }
+}

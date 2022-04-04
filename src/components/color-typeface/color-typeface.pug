@@ -1,4 +1,4 @@
-mixin colorTypeface({word,text})
-     .color-typeface
-        .color-typeface__word #{word}
-        .color-typeface__text #{text}
+mixin colorTypeface(size,word,text)
+	#{size}.color-typeface
+		span.color-typeface__word #{word}
+		span.color-typeface__text #{text}
